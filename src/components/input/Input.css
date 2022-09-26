@@ -8,7 +8,6 @@ form {
 }
 label {
   color: #aaa;
-  /* display: inline-block; */
   margin: 25px 0 15px;
   font-size: 0.6em;
   text-transform: uppercase;
@@ -26,7 +25,6 @@ select {
   color: #555;
 }
 
-
 .route {
   background: #0b6dff;
   border: 0;
@@ -37,7 +35,16 @@ select {
   cursor: pointer;
 }
 .submit {
+  margin: auto;
+  width: 70%;
   text-align: center;
+}
+
+.calc {
+  margin-top: 20px; 
+  margin-bottom: 10px;
+  color: #1b0bff;
+  font-weight: bold;
 }
 .error {
   color: #ff0062;

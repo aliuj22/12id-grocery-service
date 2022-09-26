@@ -8,18 +8,13 @@ funcitonality into manageable bits.
 
 Assumptions and thoughts:
 
-
-
 using "Example: AB1, AC4, AD10, BE3, CD4, CF2, DE1, EB3, EA2, FD1" as possible inputs, all calculations will be based on them 
-
-all three cases will be treated separately with separate input fields
 
 CASE 1: 
 User can choose the route by selecting buttons with coresponding cities,
 value is saved to an array and outputted underneath, updated with each click
 
 reset button to clear the array
-
 
 finding the best way of saving the result and comparing it with possible routes
 once I found a way to check which pairs match, 
