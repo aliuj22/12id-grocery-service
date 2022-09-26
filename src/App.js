@@ -104,7 +104,7 @@ function App() {
     <div className="App">
       <h1>Calculate your delivery costs</h1>
       <Input
-        label={'Your Route: '}
+        label={'Choose Your Route: '}
         calculateDeliveryCost={calculateDeliveryCost}
         handleInputChange={handleInputChange}
         resetInput={resetInput}
