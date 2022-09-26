@@ -1,4 +1,5 @@
 Technical Task for 12id.
+Deployed site: (https://resplendent-rugelach-ecbc9c.netlify.app)
 Miro board with some extra information, my process, problem solving etc (https://miro.com/app/board/uXjVPT21M4k=/?share_link_id=137232885320)
 
 I tried to make sure that each function handles one task which means that there are more lines of code,
