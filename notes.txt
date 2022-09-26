@@ -1,4 +1,14 @@
+I tried to make sure that each function handles one task which means that there are more lines of code, 
+but for the puropse of showing my train of thought I decided that way to be better.
+
+My process: 
+it's been a while since I completed similar task, so it took me a while finding the right solutions and splitting up the 
+funcitonality into manageable bits. 
+
+
 Assumptions and thoughts:
+
+
 
 using "Example: AB1, AC4, AD10, BE3, CD4, CF2, DE1, EB3, EA2, FD1" as possible inputs, all calculations will be based on them 
 

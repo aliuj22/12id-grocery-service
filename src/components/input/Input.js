@@ -15,18 +15,18 @@ const Input = (props) => {
     'FD',
   ];
 
-  // const possibleRoutesWithCosts = [
-  //   { route: 'AB', cost: 1 },
-  //   { route: 'AC', cost: 4 },
-  //   { route: 'AD', cost: 10 },
-  //   { route: 'BE', cost: 3 },
-  //   { route: 'CD', cost: 4 },
-  //   { route: 'CF', cost: 2 },
-  //   { route: 'DE', cost: 1 },
-  //   { route: 'EB', cost: 3 },
-  //   { route: 'EA', cost: 2 },
-  //   { route: 'FD', cost: 1 },
-  // ];
+  const possibleRoutesWithCosts = [
+    { name: 'AB', cost: 1 },
+    { name: 'AC', cost: 4 },
+    { name: 'AD', cost: 10 },
+    { name: 'BE', cost: 3 },
+    { name: 'CD', cost: 4 },
+    { name: 'CF', cost: 2 },
+    { name: 'DE', cost: 1 },
+    { name: 'EB', cost: 3 },
+    { name: 'EA', cost: 2 },
+    { name: 'FD', cost: 1 },
+  ];
 
   //state handling
   const [input, setInput] = useState([]);
@@ -40,6 +40,7 @@ const Input = (props) => {
   //resetting the input array
   const resetInput = () => {
     setInput([]);
+    sum = 0;
   };
 
   //creating pairs to compare the cities with
@@ -50,11 +51,11 @@ const Input = (props) => {
       var nextElement = input[i + 1];
       pairs.push(currentElement + nextElement);
     }
-    console.log(pairs);
-    
+    console.log('pairs', pairs);
+
     return pairs;
   };
-  
+
   //checking which pairs are possible
   let match = [];
   const checkForMatches = () => {
@@ -68,17 +69,43 @@ const Input = (props) => {
         }
       }
     }
-    console.log("matches: ",match);
-    return match
+    console.log('matches: ', match);
+    return match;
   };
 
-//compare possible matches with original pairs from the input, only accept if all exist, if not "route not possible"
+  //compare possible matches with original pairs from the input, only accept if all exist, if not "route not possible"
+  let sum = 0;
 
+  function areArraysMatchig() {
+    checkForMatches();
+    //check if all routes are possible
+    if (match.sort().toString() === pairs.sort().toString()) {
+      //loop through array containing the costs
+      for (var i = 0; i < possibleRoutesWithCosts.length; i++) {
+        console.log('possible', possibleRoutesWithCosts[i].name);
+        //loop through chosen routes to select correct prices
+        for (let j = 0; j < pairs.length; j++) {
+          console.log('Pairs possible', pairs[j]);
+          if (possibleRoutesWithCosts[i].name === pairs[j]) {
+            sum += possibleRoutesWithCosts[i].cost;
+            console.log('pairs', pairs[i]);
+            console.log('its working inside the loop');
+          }
+        }
+      }
+      console.log('sum', sum);
+      return sum;
+    } else {
+      console.log('not possible');
+      sum = 'No such route possible';
+    }
+  }
 
   const calculateDeliveryCost = (e) => {
     e.preventDefault();
     console.log('calc', input);
-    checkForMatches();
+
+    areArraysMatchig();
   };
 
   return (
