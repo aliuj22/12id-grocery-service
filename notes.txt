@@ -1,0 +1,25 @@
+I tried to make sure that each function handles one task which means that there are more lines of code, 
+but for the puropse of showing my train of thought I decided that way to be better.
+
+My process: 
+it's been a while since I completed similar task, so it took me a while finding the right solutions and splitting up the 
+funcitonality into manageable bits. 
+
+
+Assumptions and thoughts:
+
+using "Example: AB1, AC4, AD10, BE3, CD4, CF2, DE1, EB3, EA2, FD1" as possible inputs, all calculations will be based on them 
+
+CASE 1: 
+User can choose the route by selecting buttons with coresponding cities,
+value is saved to an array and outputted underneath, updated with each click
+
+reset button to clear the array
+
+finding the best way of saving the result and comparing it with possible routes
+once I found a way to check which pairs match, 
+compare created pairs with matching set to check if the whole route is possible
+if not:
+return "route not possible"
+if yes: 
+add the costs together and return them
