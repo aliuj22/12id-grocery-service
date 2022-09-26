@@ -1,5 +1,5 @@
 Technical Task for 12id.
-Miro board with some extra information, my process etc (https://miro.com/app/board/uXjVPT21M4k=/?share_link_id=137232885320)
+Miro board with some extra information, my process, problem solving etc (https://miro.com/app/board/uXjVPT21M4k=/?share_link_id=137232885320)
 
 I tried to make sure that each function handles one task which means that there are more lines of code,
 but for the puropse of showing my train of thought I decided that way to be better.
